@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+#main {
+    height: 100%;
+    width: 100%;
+    background-color: lightblue;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 50px;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    /* font-weight: ; */
+    font-style: normal;
+}
+
+.nav > :nth-child(2) {
+    display: flex;
+    gap: 30px;
+    font-size: 1.2rem;
+}
+
+.nav button {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    background-color: #1A1A1A;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+@media (min-width: 1025px) {
+    .nav-mob {
+        display: none;
+    }
+}
+
+@media (max-width: 1023px) {
+    .nav> :nth-child(1) {
+        display: none;
+    }
+    .nav > :nth-child(2) {
+        display: none;
+    }
+    
+    .nav button {
+        display: none;
+    }
+
+    #nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 40px 50px;
+        color: #000;
+    }
+
+    #nav h2 {
+        font-size: 30px;
+        font-weight: 800;
+    }
+
+    #nav i {
+        font-size: 30px;
+        font-weight: 800;
+        cursor: pointer;
+    }
+    #full {
+        height: 100%;
+        width: 60%;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.555);
+        top: 0;
+        right: -60%;
+        backdrop-filter: blur(18px);
+        padding: 160px 50px;
+    }
+    #full h4 {
+        font-size: 50px;
+        font-weight: 500;
+        margin-bottom: 9px;
+    }
+
+    #full i {
+        position: absolute;
+        top: 20px;
+        right: 10%;
+        background-color: #fff;
+        pad: 5px;
+        border-radius: 30px;
+        font-weight: 500;
+        font-size: 30px;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 50px;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    /* font-weight: ; */
+    font-style: normal;
+}
+
+.nav > :nth-child(2) {
+    display: flex;
+    gap: 30px;
+    font-size: 1.2rem;
+}
+
+.nav button {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    background-color: #1A1A1A;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+
+.section-1 {
+    position: relative;
+    display: flex;
+}
+
+.sec-1-left,
+.sec-1-right {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 20px;
+    font-size: 1.5rem;
+}
+
+.sec-1-left {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.233);
+}
+
+hr {
+    width: 30%;
+}
+
+.sec-1-left h1>span {
+    font-weight: 1000;
+}
+
+.main-wrapper {
+    width: 70%;
+    text-align: left;
+    font-family: "DM Serif Display", serif;
+    font-weight: 100;
+    font-style: italic;
+    font-size: 2.3rem;
+    font-weight: 300;
+}
+
+.sanskrit-shlok-wrapper {
+    font-size: 2rem;
+}
+
+
+
+.sec-1-right {
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.Container {
+    background-size: cover;
+}
+
+
+
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: brightness(50%);
+    -webkit-filter: brightness(50%);
+}
+

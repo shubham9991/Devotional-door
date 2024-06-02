@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "DM Sans", sans-serif;
+        }
+
+
+
+        .navigation-desktop {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 50px;
+            font-family: "DM Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
+
+        .co-services {
+            display: flex;
+            gap: 30px;
+            font-size: 1.2rem;
+        }
+
+        .co-contact {
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            color: #fff;
+            background-color: #1A1A1A;
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+        }
+
+
+
+
+
+        
+        @media (min-width: 1025px) {
+            .mobile-navigation {
+                display: none;
+            }
+        }
+
+        @media (max-width: 1023px) {
+
+            html, body {
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            overflow-x: hidden !important;
+        }
+
+        #main {
+            height: 100%;
+            width: 100%;
+            background-color: lightblue;
+        }
+
+        .navigation-desktop {
+                display: none;
+        }
+
+        .navigation-desktop > :nth-child(2) {
+            display: none;
+        }
+
+        .navigation-desktop button {
+            display: none;
+        }
+
+        #main {
+            height: 100%;
+            width: 100%;
+            background-color: lightblue;
+        }
+
+        #nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 40px 50px;
+            color: #fff;
+        }
+
+        #nav h2 {
+            font-size: 30px;
+            font-weight: 800;
+        }
+
+        #nav i {
+            font-size: 30px;
+            font-weight: 800;
+            cursor: pointer;
+        }
+        #full {
+            height: 100%;
+            width: 60%;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.555);
+            top: 0;
+            right: -60%;
+            backdrop-filter: blur(18px);
+            padding: 160px 50px;
+        }
+        #full h4 {
+            font-size: 50px;
+            font-weight: 500;
+            margin-bottom: 9px;
+        }
+
+        #full i {
+            position: absolute;
+            top: 20px;
+            right: 10%;
+            background-color: #fff;
+            pad: 5px;
+            border-radius: 30px;
+            font-weight: 500;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        }
+    </style>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<body>
+    <div id="main">
+        <div class="navigation-desktop">
+            <div class="co-logo">
+                <h1>Devine Door</h1>
+            </div>
+            <div class="co-services">
+                <span>Lorem</span>
+                <span>About us</span>
+                <span>Services</span>
+                <span>Blogs</span>
+                <span>Events</span>
+            </div>
+            <div co-contact>
+                <button>Contact us</button>
+            </div>
+        </div>
+        <div class="mobile-navigation">
+            <div id="nav">
+                <h2>Divine Door</h2>
+                <i class="ri-menu-3-line"></i>
+            </div>
+            <div id="full">
+                <h4>About us</h4>
+                <h4>Blogs</h4>
+                <h4>Services</h4>
+                <h4>Packages</h4>
+    
+                <i class="ri-close-line"></i>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        var menu = document.querySelector("#nav i")
+        var cross = document.querySelector("#full i")
+
+        var tl = gsap.timeline()
+
+        tl.to("#full", {
+            right: "0",
+            duration: 0.6
+        })
+        tl.from("#full h4",{
+            x: 150,
+            duration: 0.7,
+            stagger: 0.3,
+            opacity: 0
+        })
+        tl.from("#full i",{
+            opacity: 0
+        })
+
+        tl.pause()
+        menu.addEventListener("click", function() {
+            tl.play()
+        })
+        cross.addEventListener("click", function() {
+            tl.reverse()
+        })
+    </script>
+</body>
+</html>
