@@ -148,6 +148,67 @@
         }
 
 
+        .section-1 {
+            position: relative; /* Allows positioning of child elements */
+            width: 100%;
+            height: 100dvh;
+
+        }
+        .content-wrapper {
+            display: flex;
+            flex-direction: row !important;
+            align-items: center;
+            /* flex-wrap: wrap; */
+            justify-content: space-between;
+            position: absolute; 
+            padding: 0 50px !important;
+            /* top: 0;
+            left: 0; */
+            width: 100%; /* Adjust as needed */
+            height: 100%;
+            z-index: 1; /* Ensures text is on top of the image */
+            /* Add styling for background, padding, etc. */
+        }
+        .Container {
+            width: 100%; 
+        }
+        .Container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            height: auto;
+            filter: brightness(50%);
+            -webkit-filter: brightness(50%);
+        }
+
+
+        .sec-1-left {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            width: 50%;
+            text-align: center;
+            gap: 30px;
+            /* padding: 0 50px; */
+        }
+
+        .sec-1-left {
+            color: #fff;
+        }
+
+        .main-wrapper {
+            /* width: 70%; */
+            text-align: center;
+            font-family: "DM Serif Display", serif;
+            font-weight: 100;
+            font-style: italic;
+            font-size: 2.3rem;
+            font-weight: 300;
+        }
+
+        .sanskrit-shlok-wrapper {
+    font-size: 2rem;
+}
 
     </style>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
@@ -186,10 +247,193 @@
 
 
         <div class="section-1">
+            <div class="content-wrapper"> 
+                <div class="sec-1-left">
+                    <div class="main-wrapper">
+                        <h1><span>Embrace the Divine</span>: Puja Services at Your Doorstep</h1>
+                    </div>
+                    <hr>
+                    <div class="sanskrit-shlok-wrapper">
+                        ॐ सर्वे भवन्तु सुखिनः सर्वे सन्तु निरामयाः । <br>
+                        सर्वे भद्राणि पश्यन्तु मा कश्चिद्दुःखभाग्भवेत् ॥
+                    </div>
+                </div>
+                <div class="sec-1-right">
+
+
+
+                    <form
+  id="myForm"
+  style="
+    margin-bottom: 20px;
+    padding: 30px 30px 30px 30px;
+    border-radius: 20px;
+    width: 500px;
+    backdrop-filter: blur(10px);
+    border: 2px solid #fff;
+  "
+>
+  <div class="form-group">
+    <h2 style="margin-bottom: 30px; font-family: 'Work Sans', sans-serif">
+      <!-- Get 30% Discount -->
+    </h2>
+    <label
+      for="name"
+      style="
+        display: block;
+        margin-bottom: 10px;
+        font-size: 17px;
+        color: #ffffff;
+        font-family: 'Work Sans', sans-serif;
+      "
+      >Name*</label
+    >
+    <input
+      type="text"
+      class="form-control"
+      id="name"
+      name="name"
+      placeholder="Enter your name"
+      style="
+        width: 100%;
+        height: 45px;
+        padding: 8px;
+        margin-bottom: 24px;
+        font-size: 18px;
+        border-radius: 8px;
+        border: 0px;
+        background-color: #f1f1f1;
+        font-family: 'Work Sans', sans-serif;
+        font-size: 0.9rem;
+      "
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label
+      for="phone"
+      style="
+        display: block;
+        margin-bottom: 10px;
+        font-size: 17px;
+        font-family: 'Work Sans', sans-serif;
+      "
+      >Phone Number*</label
+    >
+    <div class="input-group">
+      <input
+        type="tel"
+        class="form-control"
+        id="phone"
+        name="phone"
+        placeholder="Enter your phone number"
+        style="
+          width: 100%;
+          height: 45px;
+          padding: 8px;
+          margin-bottom: 24px;
+          font-size: 18px;
+          border: 1px solid #ccc;
+          border-radius: 11px;
+          background-color: #f1f1f1;
+          font-family: 'Work Sans', sans-serif;
+          font-size: 0.9rem;
+        "
+        required
+      />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label
+      for="email"
+      style="
+        display: block;
+        margin-bottom: 10px;
+        font-size: 17px;
+        font-family: 'Work Sans', sans-serif;
+      "
+      >Email*</label
+    >
+    <input
+      type="email"
+      class="form-control"
+      id="email"
+      name="email"
+      placeholder="Enter your email"
+      style="
+        width: 100%;
+        height: 45px;
+        padding: 8px;
+        margin-bottom: 24px;
+        font-size: 18px;
+        border: 1px solid #ccc;
+        border-radius: 11px;
+        background-color: #f1f1f1;
+        font-family: 'Work Sans', sans-serif;
+        font-size: 0.9rem;
+      "
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label
+      for="date"
+      style="
+        display: block;
+        margin-bottom: 10px;
+        font-size: 17px;
+        font-family: 'Work Sans', sans-serif;
+      "
+      >Date*</label
+    >
+    <input
+      type="Date"
+      class="form-control"
+      id="date"
+      name="date"
+      style="
+        width: 100%;
+        height: 45px;
+        padding: 8px;
+        margin-bottom: 24px;
+        font-size: 18px;
+        border: 1px solid #ccc;
+        border-radius: 11px;
+        background-color: #f1f1f1;
+        font-family: 'Work Sans', sans-serif;
+        font-size: 0.9rem;
+      "
+      required
+    />
+  </div>
+
+  <button
+    type="submit"
+    class="btn btn-primary"
+    style="
+      border-radius: 10px;
+      background: #263238;
+      color: #fff;
+      padding: 15px 25px 15px 25px;
+      font-size: 1rem;
+      font-family: 'Work Sans', sans-serif;
+    "
+  >
+    Submit
+  </button>
+</form>
+
+                    
+                </div>
+            </div>
             <div class="Container">
                 <img src="Assets\pexels-arunothayan-rengan-sivasamy-279979277-20304884 (1).jpg" alt="">
             </div>
         </div>
+        
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

@@ -1,30 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.nav {
+body {
+    overflow-x: hidden !important;
+}
+
+.navigation-desktop {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 16px 50px;
     font-family: "DM Sans", sans-serif;
     font-optical-sizing: auto;
-    /* font-weight: ; */
     font-style: normal;
 }
 
-.nav > :nth-child(2) {
+.co-services {
     display: flex;
     gap: 30px;
     font-size: 1.2rem;
 }
 
-.nav button {
+.co-contact {
     padding: 10px;
     border: none;
     cursor: pointer;
@@ -38,44 +38,160 @@
 }
 
 
-.section-1 {
-    position: relative;
-    display: flex;
+@media (min-width: 1025px) {
+    .mobile-navigation {
+        display: none;
+    }
 }
 
-.sec-1-left,
-.sec-1-right {
-    position: absolute;
-    top: 0;
+@media (max-width: 1023px) {
+
+    html, body {
     height: 100%;
-    width: 50%;
+    width: 100%;
+}
+
+
+#main {
+    height: 100%;
+    width: 100%;
+    background-color: lightblue;
+}
+
+.navigation-desktop {
+        display: none;
+}
+
+.navigation-desktop > :nth-child(2) {
+    display: none;
+}
+
+.navigation-desktop button {
+    display: none;
+}
+
+#main {
+    height: 100%;
+    width: 100%;
+    background-color: lightblue;
+}
+
+#nav {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 40px 50px;
     color: #fff;
-    padding: 20px;
-    font-size: 1.5rem;
 }
+
+#nav h2 {
+    font-size: 30px;
+    font-weight: 800;
+}
+
+#nav i {
+    font-size: 30px;
+    font-weight: 800;
+    cursor: pointer;
+}
+#full {
+    height: 100%;
+    width: 60%;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.555);
+    top: 0;
+    right: -60%;
+    backdrop-filter: blur(18px);
+    padding: 160px 50px;
+}
+#full h4 {
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 9px;
+}
+
+#full i {
+    position: absolute;
+    top: 20px;
+    right: 10%;
+    background-color: #fff;
+    pad: 5px;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+}
+
+.section-1 {
+    position: relative;
+    width: 100%;
+}
+
+
+
+.Container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    height: auto;
+    filter: brightness(50%);
+    -webkit-filter: brightness(50%);
+}
+
+
+.section-1 {
+    position: relative; /* Allows positioning of child elements */
+    width: 100%;
+    height: 100dvh;
+
+}
+.content-wrapper {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    position: absolute; 
+    padding: 0 50px !important;
+    /* top: 0;
+    left: 0; */
+    width: 100%; /* Adjust as needed */
+    height: 100%;
+    z-index: 1; /* Ensures text is on top of the image */
+    /* Add styling for background, padding, etc. */
+}
+.Container {
+    width: 100%; 
+}
+.Container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    height: auto;
+    filter: brightness(50%);
+    -webkit-filter: brightness(50%);
+}
+
 
 .sec-1-left {
     display: flex;
     flex-direction: column;
-    gap: 50px;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.233);
+    gap: 30px;
+    width: 50%;
+    text-align: center;
+    gap: 30px;
+    /* padding: 0 50px; */
 }
 
-hr {
-    width: 30%;
-}
-
-.sec-1-left h1>span {
-    font-weight: 1000;
+.sec-1-left {
+    color: #fff;
 }
 
 .main-wrapper {
-    width: 70%;
-    text-align: left;
+    /* width: 70%; */
+    text-align: center;
     font-family: "DM Serif Display", serif;
     font-weight: 100;
     font-style: italic;
@@ -84,28 +200,14 @@ hr {
 }
 
 .sanskrit-shlok-wrapper {
-    font-size: 2rem;
+font-size: 2rem;
 }
 
 
 
-.sec-1-right {
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-}
+/* ============================== */
 
-.Container {
-    background-size: cover;
-}
-
-
-
-
-img {
+.section-2 {
+    height: 100vh;
     width: 100%;
-    height: auto;
-    display: block;
-    filter: brightness(50%);
-    -webkit-filter: brightness(50%);
 }
-
